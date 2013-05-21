@@ -1,0 +1,11 @@
+# SPARQL BGP
+?s  rdfs:label ?l1 ;
+    ?p1 ?o1 .
+?o1 dbo:populationTotal ?l2 .
+
+?s foaf:page ?o2 ;
+   dbpprop:subdivisionName ?o3 .
+
+?o3 skos:subject ?o4 ;
+   dbpprop:seat ?o5 ;
+   a ?c1 .

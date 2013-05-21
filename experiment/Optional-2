@@ -1,0 +1,2 @@
+# SPARQL OPTIONAL
+OPTIONAL { ?o1 foaf:homepage ?o6 . }

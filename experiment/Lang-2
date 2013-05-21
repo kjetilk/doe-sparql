@@ -1,0 +1,2 @@
+# SPARQL FILTER
+FILTER langMatches( lang(?l1), "fr" ) 

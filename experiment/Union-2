@@ -1,0 +1,8 @@
+# SPARQL UNION
+{
+  ?o1 dbpprop:longd ?long ;
+      dbpprop:latd  ?lat .
+} UNION {
+  ?o1 geo:long ?long ;
+      geo:lat ?lat .
+}
