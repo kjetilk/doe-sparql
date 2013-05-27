@@ -2,10 +2,11 @@
 \alias{compose}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Help composing experiment.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function just extracts the right part of the files. It is not of
+interest to users.
 }
 \usage{
 compose(factor, type)
@@ -13,21 +14,14 @@ compose(factor, type)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{factor}{
-%%     ~~Describe \code{factor} here~~
+The present factor.
 }
   \item{type}{
-%%     ~~Describe \code{type} here~~
+The type of the experimental factor.
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns the correct part of the file if it is of the right type, NA otherwise.
 }
 \references{
 %% ~put references to the literature/web site here ~
