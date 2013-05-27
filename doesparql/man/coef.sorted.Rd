@@ -1,11 +1,12 @@
 \name{coef.sorted}
 \alias{coef.sorted}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Sort the coefficients by absolute value.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  This just does \code{sort(abs(coef(model)))}.
+
+  
 }
 \usage{
 coef.sorted(model)
@@ -13,7 +14,7 @@ coef.sorted(model)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{model}{
-%%     ~~Describe \code{model} here~~
+    This argument is a object of class \code{lm} or subclass thereof.
 }
 }
 \details{
