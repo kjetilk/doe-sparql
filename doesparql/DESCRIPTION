@@ -1,9 +1,11 @@
 Package: doesparql
 Type: Package
-Title: What the package does (short line)
+Title: SPARQL Evaluations using Design of Experiments
 Version: 1.0
 Date: 2013-05-27
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Kjetil Kjernsmo	
+Maintainer: Kjetil Kjernsmo <kjekje@ifi.uio.no>
+License: MIT
+Depends: RCurl, gtools, plyr
+Suggests: FrF2, DoE.base
+Description: The R code needed to run the experiments in the study titled "Introducing Statistical Design of Experiments to SPARQL Endpoint Evaluation" by Kjernsmo & Tyssedal, to reproduce the study. It also contains some utility functions, as well as code to do the actual timings.
