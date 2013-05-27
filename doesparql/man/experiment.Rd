@@ -2,10 +2,12 @@
 \alias{experiment}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Run a single experiment
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Run a single experiment for a certain factor with a certain level and
+return the time it took from the DNS lookup finished to the data was
+completely transferred. 
 }
 \usage{
 experiment(run, files)
@@ -20,23 +22,24 @@ experiment(run, files)
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+This function is probably not something one would wish to call directly,
+but it is useful to use in iteration of across the design.
+
+At present, it will create a SELECT query, and the prefixes used are hardcoded.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+It returns the time it took from the DNS lookup finished to the data was
+completely transferred. 
 }
 \references{
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
-%%  ~~further notes~~
+It will pause if the endpoint it has been set up to request does not
+return anything. It will also log what it does.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
