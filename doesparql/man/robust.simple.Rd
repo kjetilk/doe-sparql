@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-robust.simple(model, control = "Implement", inactive = c("Machine", "Range"), pairwise = FALSE, ...)
+robust.simple(model, control = "Implement", inactive = c("Machine", "Range"), ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

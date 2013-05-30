@@ -1,7 +1,6 @@
 robust.simple <-
 function(model, control = "Implement",
-                   inactive = c("Machine", "Range"),
-                   pairwise=FALSE, ...) {
+                   inactive = c("Machine", "Range"), ...) {
   fm <- as.formula(paste("experiments ~", control, " * ", paste(inactive, collapse=" * ")))
   allmeans <- aggregate(fm, data=model, mean)
   t.test(allmeans[allmeans[control] == 2,]$experiments,
