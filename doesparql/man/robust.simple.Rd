@@ -38,7 +38,7 @@ Runs a \code{\link{t.test}} which returns a list with class \code{"htest"}.
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
 

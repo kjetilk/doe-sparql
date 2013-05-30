@@ -39,7 +39,7 @@ timeQuery(endpoint, query, ..., curlh = getCurlHandle())
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
 %%  ~~further notes~~

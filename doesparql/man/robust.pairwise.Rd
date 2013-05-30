@@ -40,7 +40,7 @@ list of list with class  \code{"htest"}.
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
 %%  ~~further notes~~

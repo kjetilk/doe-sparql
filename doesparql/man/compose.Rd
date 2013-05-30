@@ -27,7 +27,7 @@ Returns the correct part of the file if it is of the right type, NA otherwise.
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
 %%  ~~further notes~~

@@ -27,7 +27,7 @@ A linear model for the experiment.
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Kjetil Kjernsmo
 }
 \note{
 %%  ~~further notes~~
