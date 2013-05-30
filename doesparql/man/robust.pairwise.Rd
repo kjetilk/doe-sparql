@@ -2,10 +2,14 @@
 \alias{robust.pairwise}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Performs t-tests for each pair of the control factor
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function takes as arguments the \code{data.frame} containing the
+results of simulations, the name of the factor that we control, and the
+names of the factors that are active, but not controlable. For each
+combination of latter factors we do a
+t-test between the control levels based on the remaining data. 
 }
 \usage{
 robust.pairwise(model, control = "Implement", noise = c("TripleC", "BGPComp", "Lang", "Union", "Optional"))
@@ -13,24 +17,24 @@ robust.pairwise(model, control = "Implement", noise = c("TripleC", "BGPComp", "L
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{model}{
-%%     ~~Describe \code{model} here~~
+    A \code{data.frame} containing the results of the experiment.
 }
   \item{control}{
-%%     ~~Describe \code{control} here~~
+    The name of the factor that we control. The default is \code{"Implement"}.
 }
   \item{noise}{
-%%     ~~Describe \code{noise} here~~
+A vector with names of the factors that are active but
+uncontrollable. Defaults to \code{c("TripleC", "BGPComp", "Lang",
+  "Union", "Optional")}. Such factors may also be called noise or
+environmental factors.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Runs a \code{\link{t.test}} for every possible combination and returns a
+list of list with class  \code{"htest"}.
 }
 \references{
 %% ~put references to the literature/web site here ~
