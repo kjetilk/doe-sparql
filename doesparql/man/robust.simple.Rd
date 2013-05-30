@@ -2,10 +2,14 @@
 \alias{robust.simple}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Perform a single t-test for the entire experiment
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function takes as arguments the \code{data.frame} containing the
+results of simulations, the name of the factor that we control, and the
+names of the factors we have deemed to be inactive and performs a t-test
+under the assumption that we can treat the experiment as a smaller experiment
+replicated on the inactive factors.
 }
 \usage{
 robust.simple(model, control = "Implement", inactive = c("Machine", "Range"), ...)
@@ -13,30 +17,22 @@ robust.simple(model, control = "Implement", inactive = c("Machine", "Range"), ..
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{model}{
-%%     ~~Describe \code{model} here~~
+    A \code{data.frame} containing the results of the experiment.
 }
   \item{control}{
-%%     ~~Describe \code{control} here~~
+    The name of the factor that we control. The default is \code{"Implement"}.
 }
   \item{inactive}{
-%%     ~~Describe \code{inactive} here~~
-}
-  \item{pairwise}{
-%%     ~~Describe \code{pairwise} here~~
-}
-  \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+A vector with names of the factors that are deemed to be
+inactive. Defaults to \code{c("Machine", "Range")}.
+
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Runs a \code{\link{t.test}} which returns a list with class \code{"htest"}.
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -45,7 +41,7 @@ robust.simple(model, control = "Implement", inactive = c("Machine", "Range"), ..
 %%  ~~who you are~~
 }
 \note{
-%%  ~~further notes~~
+
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
