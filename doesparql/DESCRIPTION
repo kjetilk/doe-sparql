@@ -6,6 +6,5 @@ Date: 2013-05-27
 Author: Kjetil Kjernsmo	
 Maintainer: Kjetil Kjernsmo <kjekje@ifi.uio.no>
 License: MIT
-Depends: RCurl, gtools, plyr
-Suggests: FrF2, DoE.base
+Depends: RCurl, gtools, plyr, FrF2, DoE.base
 Description: The R code needed to run the experiments in the study titled "Introducing Statistical Design of Experiments to SPARQL Endpoint Evaluation" by Kjernsmo & Tyssedal, to reproduce the study. It also contains some utility functions, as well as code to do the actual timings.
