@@ -23,7 +23,7 @@ below, the experiment is designed, and then only
 the endpoints are running.
 
 For the details beyond the R package, see
-\link{https://github.com/kjetilk/doe-sparql/blob/master/README.md}
+\url{https://github.com/kjetilk/doe-sparql/blob/master/README.md}
 
 Once the experiment is finished, hypothesis tests can be run with
 \code{\link{robust.simple}} and \code{\link{robust.pairwise}}. Then,
@@ -55,8 +55,6 @@ Maintainer: Kjetil Kjernsmo <kjekje@ifi.uio.no>
 \references{
 ~~ Literature or other references for background information ~~
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ DoE }
 \seealso{
 ~~ Optional links to other man pages, e.g. ~~
