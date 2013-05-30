@@ -2,10 +2,12 @@
 \alias{timeQuery}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Use curl to time a query against a certain SPARQL endpoint.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function acts as an SPARQL client and sends a HTTP request with a
+query to a SPARQL endpoint, and uses facilities provided by the RCurl
+library to time the query.
 }
 \usage{
 timeQuery(endpoint, query, ..., curlh = getCurlHandle())
@@ -13,26 +15,38 @@ timeQuery(endpoint, query, ..., curlh = getCurlHandle())
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{endpoint}{
-%%     ~~Describe \code{endpoint} here~~
+The URL of the SPARQL Query Endpoint Service.
 }
   \item{query}{
-%%     ~~Describe \code{query} here~~
+A string with the full query.
 }
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+Any other arguments to pass to RCurl's \code{getForm} function. 
 }
-  \item{curlh}{
-%%     ~~Describe \code{curlh} here~~
+\item{curlh}{
+  \code{curlh} is set by default to \code{getCurlHandle()}. It is unlikely that
+  this should change.
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
+  A list with the following elements:
+\item{endpoint}{The time from the DNS lookup finishes to the full body
+  of the message has been returned to the client. This best represents
+  the full work of the endpoint, but has the weakness of being sensitive
+to network latency and speed.}
+\item{connection }{The time from the DNS lookup finishes to the
+  connection has been established. This is mostly interesting to see if
+  an endpoint is slow to make a first response.}
+\item{firstbyte }{The time from the connection is established to data is
+starting to be returned. In a streaming environment, that the endpoint
+starts the response before having computed the entire result set might
+be interesting.}
+\item{alldata}{The time between the first data is returned to the whole
+  result is returned. This measures the data transfer, and not
+  necessarily the endpoint performance as it depends highly on the network.}
 %% ...
 }
 \references{
@@ -42,7 +56,9 @@ timeQuery(endpoint, query, ..., curlh = getCurlHandle())
 Kjetil Kjernsmo
 }
 \note{
-%%  ~~further notes~~
+RCurl/curl provides facilities for reading other timings than have been
+returned here. These are believed by the author to be the most relevant
+to the problem, but others may be considered for inclusion if needed by others.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -51,21 +67,5 @@ Kjetil Kjernsmo
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (endpoint, query, ..., curlh = getCurlHandle()) 
-{
-    getForm(c(endpoint), query = query, ..., curl = curlh)
-    info <- getCurlInfo(curlh)
-    list(endpoint = info$total.time - info$namelookup.time, connection = info$connect.time - 
-        info$namelookup.time, firstbyte = info$starttransfer.time - 
-        info$connect.time, alldata = info$total.time - info$starttransfer.time)
-  }
+timeQuery("http://dbpedia.org/sparql", "SELECT * WHERE { ?concept a skos:Concept } LIMIT 100")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
