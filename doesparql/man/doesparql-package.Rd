@@ -37,7 +37,7 @@ much larger experiments than the present.
 However, functions such as \code{\link{fulllm}} (to create a linear
 model with the 8 factors we used),
 \code{\link{implementation.coef}} and to a lesser extent
-\code{\link{coef.sorted}} are shortcuts for this particular experiment
+\code{\link{coefsorted}} are shortcuts for this particular experiment
 and is unlikely to be very useful for other studies.
 
 The \code{\link{timeQuery}} function, on the other hand, is likely to be

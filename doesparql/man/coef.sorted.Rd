@@ -1,5 +1,5 @@
-\name{coef.sorted}
-\alias{coef.sorted}
+\name{coefsorted}
+\alias{coefsorted}
 \title{
 Sort the coefficients by absolute value.
 }
@@ -9,7 +9,7 @@ Sort the coefficients by absolute value.
   
 }
 \usage{
-coef.sorted(model)
+coefsorted(model)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
