@@ -8,8 +8,8 @@
 \tabular{ll}{
 Package: \tab doesparql\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-05-27\cr
+Version: \tab 1.01\cr
+Date: \tab 2013-05-31\cr
 License: \tab MIT\cr
 }
 At present, quite a lot of manual interaction with computer systems is

@@ -1,8 +1,8 @@
 Package: doesparql
 Type: Package
 Title: SPARQL Evaluations using Design of Experiments
-Version: 1.0
-Date: 2013-05-27
+Version: 1.01
+Date: 2013-05-31
 Author: Kjetil Kjernsmo	
 Maintainer: Kjetil Kjernsmo <kjekje@ifi.uio.no>
 License: MIT
