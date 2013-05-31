@@ -26,7 +26,7 @@ Then start R, simply by the letter R on the command line. Then, in the
 R shell:
 ```{r}
 install.packages(c("DoE.base", "FrF2"))
-install.packages("doe-sparql/doesparql_1.0.tar.gz", repos=NULL)
+install.packages("doe-sparql/doesparql_1.01.tar.gz", repos=NULL)
 ```
 
 You may now load the experimentation code and test that the install
