@@ -9,6 +9,35 @@ Work to package the code in an R package is in progress, patches to
 4store and scripts to run the experiments described are in this
 directory.
 
+Download and installing this code
+---------------------------------
+
+```
+mkdir src
+cd src
+git clone https://github.com/kjetilk/doe-sparql.git
+apt-get install curl libcurl4-gnutls-dev r-recommended r-cran-bitops r-cran-gtools r-cran-plyr r-cran-relimp r-cran-vcd libigraph0-dev r-cran-scatterplot3d r-cran-colorspace
+```
+
+If you have a different operating system, all these dependencies must
+be installed from other sources.
+
+Then start R, simply by the letter R on the command line. Then, in the
+R shell:
+```R
+install.packages(c("DoE.base", "FrF2"))
+install.packages("doe-sparql/doesparql_1.0.tar.gz", repos=NULL)
+```
+
+You may now load the experimentation code and test that the install
+was successful by timing an example query against DBPedia:
+
+```R
+library(doesparql)
+example(timeQuery)
+```
+
+
 Building patched 4store
 -----------------------
 
@@ -26,8 +55,6 @@ apt-get install automake git libtool uuid-dev
 Then, as a normal user, check out this author's fork of 4store:
 
 ```
-mkdir src
-cd src
 git clone https://github.com/kjetilk/4store.git
 ```
 
