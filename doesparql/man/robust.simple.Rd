@@ -49,23 +49,3 @@ Kjetil Kjernsmo
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (model, control = "Implement", inactive = c("Machine", 
-    "Range"), pairwise = FALSE, ...) 
-{
-    fm <- as.formula(paste("experiments ~", control, " * ", paste(inactive, 
-        collapse = " * ")))
-    allmeans <- aggregate(fm, data = model, mean)
-    t.test(allmeans[allmeans[control] == 2, ]$experiments, allmeans[allmeans[control] == 
-        1, ]$experiments, alternative = "less")
-  }
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
