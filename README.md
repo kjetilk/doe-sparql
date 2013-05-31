@@ -85,3 +85,86 @@ make install
 
 You should now have two independent installations of 4store, each with
 different artificial drawbacks.
+
+Then, the same proceedure should be repeated on a different machine to
+allow for testing different hardware.
+
+Starting 4store instances
+-------------------------
+
+First, the a dataset is needed. We used the dataset of the [DBPedia
+SPARQL Benchmark](http://aksw.org/Projects/DBPSB.html). We used a
+subset of the last 1 or 2 million triples in most runs (see the paper
+for details), they can be obtained using the tail command.
+
+You will now set up and import those data, possibly modifying the path
+to the data files:
+
+```
+cd $HOME/4store-filter-slow
+bin/4s-backend-setup largefilter
+bin/4s-backend-setup smallfilter
+bin/4s-backend largefilter
+bin/4s-backend smallfilter
+bin/4s-import -v largefilter benchmark_2.nt
+bin/4s-import -v smallfilter benchmark_1.nt
+```
+
+The procedure is then repeated for the JOIN operation factor:
+
+```
+cd $HOME/4store-bgp-slow
+bin/4s-backend-setup largebgp
+bin/4s-backend-setup smallbgp
+bin/4s-backend largebgp
+bin/4s-backend smallbgp
+bin/4s-import -v largebgp benchmark_2.nt
+bin/4s-import -v smallbgp benchmark_1.nt
+```
+
+Now, to be able to run several servers at the same time, we bind the
+different instances of 4store to different ports, with port numbers
+that match the levels of the relevant factors. E.g. port 8012 will
+host a server with the smaller number of triples and the delay in
+JOIN, where the last two digits correspond to the levels.
+
+To simplify starting the servers as well as test them to ensure they
+are up, we include a script by the name run.sh in this directory. This
+can be run as
+
+```
+cd ../
+src/doe-sparql/run.sh
+```
+
+If no endpoints was running before the script was executed, it will
+first report an error that can be disregarded, and then a list of all
+4store processes. When the script returns
+
+```
+http://localhost:8011/status/ 200
+http://localhost:8012/status/ 200
+http://localhost:8021/status/ 200
+http://localhost:8022/status/ 200
+```
+i.e. returns that all endpoints are running by reporting their HTTP
+code 200, this procedure should also be repeated on a different machine.
+
+When both machines are running 4 endpoints, the experimenter may
+proceed to run the experiment using the above R module. To launch
+that, go to the directory containing the experimental setup directory,
+which should be R's working directory for the experiment,
+and launch e.g.
+
+```
+cd src/doe-sparql/
+R
+```
+and then load the library and visit its package help file:
+```{r}
+library(doesparql)
+help(doesparql)
+```
+
+The package help file contains further instructions with examples for
+the analysis of the experiment.
