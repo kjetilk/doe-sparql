@@ -5,9 +5,10 @@ All the code necessary to reproduce the study titled "Introducing
   Statistical Design of Experiments to SPARQL Endpoint Evaluation" by
   Kjernsmo & Tyssedal is published here.
 
-Work to package the code in an R package is in progress, patches to
-4store and scripts to run the experiments described are in this
-directory.
+Here, you will learn how to download and install the R code developed
+for the study. You will then learn to build, install and run several
+4store instances with different degradation. You will finally be
+pointed to other documentation to actually run the study.
 
 This experiment has been run on Debian GNU/Linux and a Ubuntu
 derivative. Detailed instructions may differ to other operating
