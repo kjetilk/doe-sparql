@@ -12,15 +12,20 @@ directory.
 Download and installing this code
 ---------------------------------
 
+First, as root, install all dependencies:
+```
+apt-get install curl libcurl4-gnutls-dev r-recommended r-cran-bitops r-cran-gtools r-cran-plyr r-cran-relimp r-cran-vcd libigraph0-dev r-cran-scatterplot3d r-cran-colorspace
+```
+If you have a different operating system, all these dependencies must
+be installed from other sources.
+
+Then, as your usual user, get the code, e.g.:
 ```
 mkdir src
 cd src
 git clone https://github.com/kjetilk/doe-sparql.git
-apt-get install curl libcurl4-gnutls-dev r-recommended r-cran-bitops r-cran-gtools r-cran-plyr r-cran-relimp r-cran-vcd libigraph0-dev r-cran-scatterplot3d r-cran-colorspace
 ```
 
-If you have a different operating system, all these dependencies must
-be installed from other sources.
 
 Then start R, simply by the letter R on the command line. Then, in the
 R shell:
