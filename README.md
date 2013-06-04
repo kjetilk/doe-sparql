@@ -9,6 +9,12 @@ Work to package the code in an R package is in progress, patches to
 4store and scripts to run the experiments described are in this
 directory.
 
+This experiment has been run on Debian GNU/Linux and a Ubuntu
+derivative. Detailed instructions may differ to other operating
+systems, but the general idea should be possible to get from these. We
+proceed with Debian-specific instructions:
+
+
 Download and installing this code
 ---------------------------------
 
@@ -45,11 +51,6 @@ example(timeQuery)
 
 Building patched 4store
 -----------------------
-
-This experiment has been run on Debian GNU/Linux and a Ubuntu
-derivative. Detailed instructions may differ to other operating
-systems, but the general idea should be possible to get from these. We
-proceed with Debian-specific instructions:
 
 First, get dependencies and tools to build, as root:
 ```
