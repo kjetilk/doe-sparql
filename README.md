@@ -1,8 +1,8 @@
 Using statistical Design of Experiments in SPARQL Endpoint Evaluations.
 =======================================================================
 
-All the code necessary to reproduce the study titled "Introducing
-  Statistical Design of Experiments to SPARQL Endpoint Evaluation" by
+All the code necessary to reproduce the study titled ["Introducing
+  Statistical Design of Experiments to SPARQL Endpoint Evaluation"](http://folk.uio.no/kjekje/2013/iswc.pdf) by
   Kjernsmo & Tyssedal is published here.
 
 Work to package the code in an R package is in progress, patches to
