@@ -5,22 +5,34 @@ All the code necessary to reproduce the study titled ["Introducing
   Statistical Design of Experiments to SPARQL Endpoint Evaluation"](http://folk.uio.no/kjekje/2013/iswc.pdf) by
   Kjernsmo & Tyssedal is published here.
 
-Work to package the code in an R package is in progress, patches to
-4store and scripts to run the experiments described are in this
-directory.
+Here, you will learn how to download and install the R code developed
+for the study. You will then learn to build, install and run several
+4store instances with different degradation. You will finally be
+pointed to other documentation to actually run the study.
+
+This experiment has been run on Debian GNU/Linux and a Ubuntu
+derivative. Detailed instructions may differ to other operating
+systems, but the general idea should be possible to get from these. We
+proceed with Debian-specific instructions:
+
 
 Download and installing this code
 ---------------------------------
 
+First, as root, install all dependencies:
+```
+apt-get install curl libcurl4-gnutls-dev r-recommended r-cran-bitops r-cran-gtools r-cran-plyr r-cran-relimp r-cran-vcd libigraph0-dev r-cran-scatterplot3d r-cran-colorspace
+```
+If you have a different operating system, all these dependencies must
+be installed from other sources.
+
+Then, as your usual user, get the code, e.g.:
 ```
 mkdir src
 cd src
 git clone https://github.com/kjetilk/doe-sparql.git
-apt-get install curl libcurl4-gnutls-dev r-recommended r-cran-bitops r-cran-gtools r-cran-plyr r-cran-relimp r-cran-vcd libigraph0-dev r-cran-scatterplot3d r-cran-colorspace
 ```
 
-If you have a different operating system, all these dependencies must
-be installed from other sources.
 
 Then start R, simply by the letter R on the command line. Then, in the
 R shell:
@@ -40,11 +52,6 @@ example(timeQuery)
 
 Building patched 4store
 -----------------------
-
-This experiment has been run on Debian GNU/Linux and a Ubuntu
-derivative. Detailed instructions may differ to other operating
-systems, but the general idea should be possible to get from these. We
-proceed with Debian-specific instructions:
 
 First, get dependencies and tools to build, as root:
 ```
