@@ -175,3 +175,9 @@ help(doesparql)
 
 The package help file contains further instructions with examples for
 the analysis of the experiment.
+
+Licence
+-------
+
+The R package carries the MIT License, the rest in this repository is
+released under CC0. These are very permissive terms.
