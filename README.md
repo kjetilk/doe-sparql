@@ -180,4 +180,7 @@ Licence
 -------
 
 The R package carries the MIT License, the rest in this repository is
-released under CC0. These are very permissive terms.
+released under CC0 (meaning, basically, you can use documentation and
+code snippets without even crediting the author, but referencing the
+paper would probably be appropriate in such cases). These are very
+permissive terms.
